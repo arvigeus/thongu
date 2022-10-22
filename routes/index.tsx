@@ -1,21 +1,23 @@
-/** @jsx h */
-import { h } from "preact";
-import { tw } from "@twind";
-import Counter from "../islands/Counter.tsx";
+import { Head } from "$fresh/runtime.ts";
+import Layout from "../layout.tsx";
+import MultiCharacterInput from "../islands/MultiCharacterInput.tsx";
+import { Word } from "../components/Word.tsx";
 
 export default function Home() {
   return (
-    <div class={tw`p-4 mx-auto max-w-screen-md`}>
-      <img
-        src="/logo.svg"
-        height="100px"
-        alt="the fresh logo: a sliced lemon dripping with juice"
-      />
-      <p class={tw`my-6`}>
-        Welcome to `fresh`. Try update this message in the ./routes/index.tsx
-        file, and refresh.
-      </p>
-      <Counter start={3} />
-    </div>
+    <>
+      <Head>
+        <title>Learn Vietnamese</title>
+      </Head>
+      <Layout>
+        <Word name="xin chào" className="flex justify-center text-6xl" />
+        <div class="h-12"></div>
+        <MultiCharacterInput
+          amount={7}
+          className="flex gap-4 justify-center text-4xl"
+          letterClassName="border-b-2 border-vn-yellow text-center bg-transparent"
+        />
+      </Layout>
+    </>
   );
 }
