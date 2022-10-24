@@ -1,4 +1,5 @@
-import { createRef, JSX } from "preact";
+import type { JSX } from "preact";
+import { createRef } from "preact";
 import { useCallback, useMemo } from "preact/hooks";
 
 import LetterInput from "./LetterInput.tsx";
@@ -24,7 +25,7 @@ export default function MultiCharacterInput(
     if (!target) return;
     if (!target.value) target.focus();
     else target.select();
-  }, [amount]);
+  }, [amount, inputRefs]);
 
   const handleChange =
     (index: number): JSX.GenericEventHandler<HTMLInputElement> => () => {
@@ -108,6 +109,7 @@ export default function MultiCharacterInput(
     <div className={className}>
       {new Array(amount).fill(amount).map((_, index) => (
         <LetterInput
+          key={index}
           type="text"
           ref={inputRefs[index]}
           className={letterClassName}

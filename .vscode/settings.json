@@ -4,6 +4,12 @@
   "editor.defaultFormatter": "denoland.vscode-deno",
   "editor.formatOnSave": true,
   "editor.codeActionsOnSave": {
-    "source.fixAll": true
+    "source.fixAll": true,
+    "source.fixAll.eslint": false
   },
+  "eslint.lintTask.enable": true,
+  "files.exclude": {
+    "**/node_modules": true,
+    "**/package-lock.json": true
+  }
 }
