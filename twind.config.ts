@@ -5,6 +5,7 @@ export default {
   theme: {
     extend: {
       colors: {
+        "vn-red": "#A52422",
         "vn-yellow": "#C5B358",
       },
     },
