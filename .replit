@@ -6,7 +6,7 @@ run = [
 
 hidden = [".deno"]
 
-entrypoint = "index.ts"
+entrypoint = "dev.ts"
 
 [env]
 DENO_DIR = "/home/runner/${REPL_SLUG}/.deno"
