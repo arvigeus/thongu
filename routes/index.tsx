@@ -15,7 +15,7 @@ export default function Home() {
         <MultiCharacterInput
           amount={7}
           className="flex gap-4 justify-center text-4xl"
-          letterClassName="border-b-2 border-vn-yellow text-center bg-transparent"
+          letterClassName="border-b-2 border-vn-yellow font-mono text-center bg-transparent"
         />
       </Layout>
     </>

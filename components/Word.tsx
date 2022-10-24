@@ -5,5 +5,5 @@ export type WordProps = {
 };
 
 export function Word({ name, audio, className }: WordProps) {
-  return <div className={className}>{name}</div>;
+  return <h1 className={className}>{name}</h1>;
 }
