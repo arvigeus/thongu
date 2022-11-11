@@ -8,6 +8,7 @@ interface WordData {
   language: "en" | "vn";
   translations: string[];
   familiarity: number;
+  audio?: string | null;
 }
 
 export const handler: Handlers<WordData> = {
@@ -18,6 +19,7 @@ export const handler: Handlers<WordData> = {
         language: "vn",
         translations: ["hello"],
         familiarity: 0,
+        audio: null,
       }),
     );
   },
